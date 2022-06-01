@@ -1,1 +1,1 @@
-Hello this are some FPGA/VLSI projects in verilog
+FPGA/VLSI projects in verilog
