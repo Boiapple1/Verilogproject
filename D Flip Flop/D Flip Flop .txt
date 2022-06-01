@@ -1,0 +1,19 @@
+`timescale 1ns / 1ps
+
+ module dff (
+   data  ,
+   clk    , 
+  reset ,   
+  q         
+  );
+  input data, clk, reset ; 
+  output q;
+  reg q;
+//process for DFF 
+  always @ ( posedge clk or reset)//process for DFF in which it acts like a buffer unless it is reset
+  if (reset) begin
+   q <= 1'b0;
+  end  else begin
+    q <= data;
+  end
+  endmodule
