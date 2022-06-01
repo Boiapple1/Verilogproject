@@ -1,0 +1,33 @@
+`timescale 1ns / 1ps
+
+
+module dfftb(
+);
+  reg data, clk, reset ; 
+  wire q;
+ dff t1(data,clk ,reset ,q);
+ 
+ initial begin
+ clk=0;
+ forever #40 clk=~clk;
+ end
+ 
+ initial begin
+
+#20;
+data=1;
+reset=0;
+#20;
+reset =1; 
+#20;
+reset =0;
+
+#20;
+data=0;
+reset=0;
+#20;
+reset =1; 
+#20;
+reset =0;
+ end
+endmodule
